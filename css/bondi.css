@@ -1,0 +1,217 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+:root {
+  --dark-color: #19283f;
+  --green-color: #33d1cc;
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --section-color: #eff7fa;
+  --main-transition: all 0.2s ease-in-out;
+}
+/* Start Components */
+.main-btn {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+}
+.main-title:after {
+  content: "";
+  width: 120px;
+  height: 2px;
+  background-color: var(--green-color);
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+}
+/* End Components */
+/* Start Navbar */
+.navbar {
+  background-color: var(--dark-color);
+}
+.navbar .navbar-nav .nav-link {
+  color: white;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+  color: var(--green-color);
+}
+.navbar .search {
+  color: white;
+  cursor: pointer;
+  border-left: 1px solid var(--green-color);
+  transition: var(--main-transition);
+}
+.navbar .search:hover {
+  color: var(--green-color);
+}
+.navbar .navbar-toggler {
+  color: white;
+  border-color: white;
+  font-size: 25px;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+  border-color: var(--green-color);
+}
+/* End Navbar */
+/* Start landing section */
+.landing-section {
+  background-color: var(--dark-color);
+  height: calc(100vh - 72px);
+}
+/* End landing section */
+/* Start Features Section */
+.features .feat-icon {
+  height: 200px;
+}
+.features .feat-icon svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.features .feat-icon .icon {
+  color: var(--green-color);
+}
+.features .feat-icon .number {
+  font-size: 12rem;
+  color: var(--section-color);
+}
+.features .feat h4 {
+  color: var(--yellow-color);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+/* End Features Section */
+/* Start Our Work Section */
+.our-work {
+  background-color: var(--section-color);
+}
+.our-work ul li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.our-work ul li.active {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+  border-radius: 10px;
+}
+.our-work ul li:not(.active):hover {
+  color: var(--red-color);
+}
+
+.our-work .box::before {
+  content: attr(data-ourwork);
+  position: absolute;
+  width: calc(100% - 1rem);
+  height: calc(100% - 1rem);
+  background-color: #33d1ccb6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.6);
+  transform: translateY(calc(100% + 0.5rem));
+  transition: var(--main-transition);
+  cursor: pointer;
+}
+.our-work .box:hover::before {
+  transform: translateX(0);
+}
+/* End Our Work Section */
+/* Start About Us Section */
+.about-us .container > p:first-of-type{
+  max-width: 500px;
+}
+/* End About Us Section */
+/* Start our Team Section */
+.our-team{
+  background-color: var(--section-color);
+}
+.our-team .title h2{
+  color: var(--yellow-color);
+}
+.our-team .box h4{
+  background-color: var(--green-color);
+  color: white;
+  margin-bottom: -5px;
+}
+/* End our Team Section */
+/* Start Project Section */
+.project {
+  background-color: var(--dark-color);
+}
+/* End Project Section */
+/* Start Blog Section */
+.blog p {
+  margin-bottom: 5px;
+}
+/* End Blog Section */
+/* Start Subscribe Section */
+.subscribe{
+  background-color: var(--yellow-color);
+}
+.subscribe input{
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid white;
+  caret-color: white;
+}
+.subscribe input:focus{
+  outline: none;
+}
+.subscribe ::placeholder{
+  color: white;
+}
+.subscribe .btn{
+  background-color: black;
+  color: var(--yellow-color);
+}
+/* End Subscribe Section */
+/* Start Footer Section */
+.footer {
+  background-color: var(--dark-color);
+}
+.footer .logo{
+  cursor: pointer;
+}
+.footer .copyright > span{
+  color: var(--green-color);
+  cursor: pointer;
+}
+.footer .copyright div span{
+  color: var(--yellow-color);
+  cursor: pointer;
+}
+.footer ul li{
+  cursor: pointer;
+}
+.footer ul svg{
+  transition: var(--main-transition);
+}
+.footer ul svg.facebook {
+  background-color: #3b5998;
+}
+.footer ul svg.instagram {
+  background-color: #e1306c;
+}
+.footer ul svg.youtube {
+  background-color: #ff0000;
+}
+.footer ul svg.linkedin {
+  background-color: #0077b5;
+}
+.footer ul svg:hover {
+  transform: scale(1.1);
+}
+/* End Footer Section */
